@@ -4,202 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hub de Inovação - Cooperativa</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #F3F4F6; }
-        
-        /* Cores Institucionais */
-        :root {
-            --sicredi-green: #3FA110;
-            --sicredi-dark: #2d7a0b;
-        }
-
-        /* Efeitos de Hover nos Cards */
-        .hub-card {
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-        .hub-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Estilo do Balão "Você Sabia" */
-        .did-you-know-bg {
-            background: linear-gradient(135deg, #3FA110 0%, #84CC16 100%);
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css?v=1">
 </head>
-<body class="text-gray-800">
+<body>
 
-    <header class="fixed top-0 left-0 right-0 h-16 bg-[#3FA110] shadow-md z-50 flex items-center justify-between px-4 lg:px-8">
-        <div class="flex items-center space-x-4">
-            <button class="lg:hidden p-2 text-white hover:bg-[#327a0d] rounded-md">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-            <h1 class="text-xl lg:text-2xl font-bold text-white tracking-wider">HUB DE INOVAÇÃO</h1>
-        </div>
-        <div class="flex items-center space-x-4">
-            <div class="h-8 bg-white/20 rounded px-2 flex items-center text-white text-xs font-bold">LOGO 1</div>
-            <div class="h-8 bg-white/20 rounded px-2 flex items-center text-white text-xs font-bold">LOGO 2</div>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="header-left">
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+                <h1 class="header-title">HUB DE INOVAÇÃO</h1>
+            </div>
+            <div class="header-right">
+                <div class="logo-placeholder">Inovação</div>
+                <div class="logo-placeholder">Sicredi</div>
+            </div>
         </div>
     </header>
 
-    <main class="pt-24 pb-12 px-4 max-w-7xl mx-auto">
+    <main class="main-container">
         
-        <div class="mb-10">
-            <h2 class="text-3xl font-bold text-gray-800">Olá, Colaborador!</h2>
-            <p class="text-gray-500 mt-1">Bem-vindo ao ecossistema de inovação da nossa cooperativa. O que vamos transformar hoje?</p>
+        <div class="welcome-section">
+            <h2>Olá, Colaborador!</h2>
+            <p>Bem-vindo ao ecossistema de inovação da nossa cooperativa. O que vamos transformar hoje?</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+        <div class="cards-grid">
             
-            <a href="#" class="hub-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group cursor-pointer hover:border-yellow-400">
-                <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-3 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+            <a href="#" class="hub-card hover-yellow">
+                <div class="card-icon icon-yellow">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
                 </div>
-                <h3 class="font-bold text-gray-800">Nossas Ideias</h3>
-                <span class="text-xs text-gray-500 mt-1">Envie sua sugestão</span>
+                <h3>Nossas Ideias</h3>
+                <span>Envie sua sugestão</span>
             </a>
 
-            <a href="radar-ia.html" class="hub-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group cursor-pointer hover:border-blue-500">
-                <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-3 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+            <a href="radar-ia.html" class="hub-card hover-blue">
+                <div class="card-icon icon-blue">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
                 </div>
-                <h3 class="font-bold text-gray-800">Radar de IA</h3>
-                <span class="text-xs text-gray-500 mt-1">Tecnologias emergentes</span>
+                <h3>Radar de IA</h3>
+                <span>Tecnologias emergentes</span>
             </a>
 
-            <a href="index.html" class="hub-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group cursor-pointer hover:border-[#3FA110]">
-                <div class="w-12 h-12 bg-green-100 text-[#3FA110] rounded-full flex items-center justify-center mb-3 group-hover:bg-[#3FA110] group-hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+            <a href="SEU_LINK_DO_RECIP_AQUI.aspx" class="hub-card hover-green">
+                <div class="card-icon icon-green">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
                 </div>
-                <h3 class="font-bold text-gray-800">Radar RECIP</h3>
-                <span class="text-xs text-gray-500 mt-1">Inovação com propósito</span>
+                <h3>Radar RECIP</h3>
+                <span>Inovação com propósito</span>
             </a>
 
-            <a href="#" class="hub-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group cursor-pointer hover:border-purple-500">
-                <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-3 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            <a href="#" class="hub-card hover-purple">
+                <div class="card-icon icon-purple">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
                 </div>
-                <h3 class="font-bold text-gray-800">Evolução Digital</h3>
-                <span class="text-xs text-gray-500 mt-1">Apps e Sistemas</span>
+                <h3>Evolução Digital</h3>
+                <span>Apps e Sistemas</span>
             </a>
 
-            <a href="#" class="hub-card bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center group cursor-pointer hover:border-orange-500">
-                <div class="w-12 h-12 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mb-3 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            <a href="#" class="hub-card hover-orange">
+                <div class="card-icon icon-orange">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                 </div>
-                <h3 class="font-bold text-gray-800">Letramento</h3>
-                <span class="text-xs text-gray-500 mt-1">Cursos e Artigos</span>
+                <h3>Letramento</h3>
+                <span>Cursos e Artigos</span>
             </a>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="content-wrapper">
             
-            <div class="lg:col-span-2 space-y-6">
-                <div class="flex justify-between items-end mb-2">
-                    <h2 class="text-xl font-bold text-gray-800 border-l-4 border-[#3FA110] pl-3">Últimas Notícias</h2>
-                    <a href="#" class="text-sm text-[#3FA110] font-semibold hover:underline">Ver todas</a>
+            <div class="news-column">
+                <div class="section-header">
+                    <h2>Últimas Notícias</h2>
+                    <a href="#">Ver todas</a>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow cursor-pointer">
-                    <div class="h-64 w-full bg-gray-200 relative">
-                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Reunião Inovação" class="w-full h-full object-cover">
-                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 pt-20">
-                            <span class="bg-[#3FA110] text-white text-xs px-2 py-1 rounded mb-2 inline-block">Destaque</span>
-                            <h3 class="text-white text-2xl font-bold">Hackathon 2024: Inscrições Abertas</h3>
-                            <p class="text-gray-200 text-sm mt-1">Participe da maratona de desenvolvimento que vai transformar o atendimento nas agências.</p>
+                <div class="news-card highlight-card">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');">
+                        <div class="card-overlay">
+                            <span class="badge">Destaque</span>
+                            <h3>Hackathon 2024: Inscrições Abertas</h3>
+                            <p>Participe da maratona de desenvolvimento que vai transformar o atendimento nas agências.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
-                        <div class="h-40 bg-gray-200 rounded-lg mb-4 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+                <div class="sub-news-grid">
+                    <div class="news-card small-card">
+                        <div class="small-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-body">
+                            <span class="date">10 Dez, 2025</span>
+                            <h4>Novo assistente virtual em testes</h4>
+                            <p>A equipe de IA iniciou os testes piloto do assistente que ajudará gerentes...</p>
                         </div>
-                        <span class="text-xs text-gray-500 mb-1">10 Dez, 2025</span>
-                        <h4 class="font-bold text-gray-800 text-lg leading-tight mb-2">Novo assistente virtual em testes</h4>
-                        <p class="text-sm text-gray-600 line-clamp-2">A equipe de IA iniciou os testes piloto do assistente que ajudará gerentes...</p>
                     </div>
 
-                    <div class="bg-white rounded-xl shadow-sm p-4 hover:shadow-md transition-shadow cursor-pointer flex flex-col">
-                        <div class="h-40 bg-gray-200 rounded-lg mb-4 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover">
+                    <div class="news-card small-card">
+                        <div class="small-image" style="background-image: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80');"></div>
+                        <div class="card-body">
+                            <span class="date">08 Dez, 2025</span>
+                            <h4>Visita ao Vale do Silício</h4>
+                            <p>Diretoria compartilha aprendizados sobre cooperativismo digital após viagem.</p>
                         </div>
-                        <span class="text-xs text-gray-500 mb-1">08 Dez, 2025</span>
-                        <h4 class="font-bold text-gray-800 text-lg leading-tight mb-2">Visita ao Vale do Silício</h4>
-                        <p class="text-sm text-gray-600 line-clamp-2">Diretoria compartilha aprendizados sobre cooperativismo digital após viagem.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="lg:col-span-1 space-y-8">
+            <div class="sidebar-column">
                 
-                <div class="did-you-know-bg rounded-2xl p-6 text-white shadow-lg relative overflow-hidden transform hover:scale-[1.02] transition-transform">
-                    <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-20 rounded-full blur-xl"></div>
-                    
-                    <div class="flex items-center gap-2 mb-3">
-                        <svg class="w-6 h-6 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                        <h3 class="font-bold text-lg">Você sabia?</h3>
+                <div class="did-you-know-card">
+                    <div class="decorative-blur"></div>
+                    <div class="dyk-header">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3>Você sabia?</h3>
                     </div>
-                    
-                    <p class="text-sm font-medium leading-relaxed opacity-95">
-                        Que a cooperativa economizou mais de <strong>R$ 2 milhões</strong> em papel ano passado apenas digitalizando as assinaturas de assembleias?
-                    </p>
-                    
-                    <div class="mt-4 pt-4 border-t border-white/30 flex justify-between items-center">
-                        <span class="text-xs opacity-75">Dica da semana #42</span>
-                        <button class="text-xs bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full transition-colors">Ver mais</button>
+                    <p>Que a cooperativa economizou mais de <strong>R$ 2 milhões</strong> em papel ano passado apenas digitalizando as assinaturas de assembleias?</p>
+                    <div class="dyk-footer">
+                        <span>Dica da semana #42</span>
+                        <button>Ver mais</button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-                    <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
-                        <span class="w-2 h-2 bg-[#3FA110] rounded-full"></span>
+                <div class="practices-card">
+                    <h3>
+                        <span class="dot"></span>
                         Práticas Inovadoras
                     </h3>
                     
-                    <div class="space-y-4">
-                        <div class="border-l-2 border-gray-200 pl-4 hover:border-[#3FA110] transition-colors cursor-pointer">
-                            <p class="text-sm text-gray-800 font-medium">Automação de Boletos</p>
-                            <div class="flex items-center gap-2 mt-1">
-                                <span class="text-xs text-gray-500">Agência Centro</span>
-                                <span class="text-[10px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Processos</span>
+                    <div class="practices-list">
+                        <div class="practice-item hover-green">
+                            <p class="practice-title">Automação de Boletos</p>
+                            <div class="practice-meta">
+                                <span class="location">Agência Centro</span>
+                                <span class="tag tag-green">Processos</span>
                             </div>
                         </div>
 
-                        <div class="border-l-2 border-gray-200 pl-4 hover:border-[#3FA110] transition-colors cursor-pointer">
-                            <p class="text-sm text-gray-800 font-medium">Gamificação no Atendimento</p>
-                            <div class="flex items-center gap-2 mt-1">
-                                <span class="text-xs text-gray-500">Agência Norte</span>
-                                <span class="text-[10px] bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">Pessoas</span>
+                        <div class="practice-item hover-purple">
+                            <p class="practice-title">Gamificação no Atendimento</p>
+                            <div class="practice-meta">
+                                <span class="location">Agência Norte</span>
+                                <span class="tag tag-purple">Pessoas</span>
                             </div>
                         </div>
 
-                        <div class="border-l-2 border-gray-200 pl-4 hover:border-[#3FA110] transition-colors cursor-pointer">
-                            <p class="text-sm text-gray-800 font-medium">Reutilização de Hardware</p>
-                            <div class="flex items-center gap-2 mt-1">
-                                <span class="text-xs text-gray-500">TI Sede</span>
-                                <span class="text-[10px] bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">ESG</span>
+                        <div class="practice-item hover-blue">
+                            <p class="practice-title">Reutilização de Hardware</p>
+                            <div class="practice-meta">
+                                <span class="location">TI Sede</span>
+                                <span class="tag tag-blue">ESG</span>
                             </div>
                         </div>
                     </div>
 
-                    <button class="w-full mt-6 text-sm text-[#3FA110] font-semibold border border-[#3FA110] rounded-lg py-2 hover:bg-[#3FA110] hover:text-white transition-colors">
-                        Enviar meu relato
-                    </button>
+                    <button class="btn-outline">Enviar meu relato</button>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 Cooperativa - Núcleo de Inovação e Estratégia.</p>
-        </div>
+    <footer class="main-footer">
+        <p>&copy; 2025 Cooperativa - Núcleo de Inovação e Estratégia.</p>
     </footer>
 
+    <script src="script.js?v=1"></script>
 </body>
 </html>
